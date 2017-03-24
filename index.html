@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Harmoniser</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="music-box" style="height:800px;width:1200px;"></div>
+
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="harmoniser.js"></script>
+    <script type="text/javascript">
+      var $musicBox = $('.music-box');
+      Harmoniser.initialize({
+        box: $musicBox,
+        minPitch: -21, // number of half-steps (+/-) from A4
+        maxPitch: 15, // number of half-steps (+/-) from A4
+        whiteNotesOnly: false,
+        loopSize: 32, // number of notes in the loop
+        noteLength: 180 // length of each note in sec/1000
+      });
+    </script>
+  </body>
+</html>
